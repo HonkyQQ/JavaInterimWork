@@ -13,11 +13,16 @@ public class LaptopMarket {
         Scanner scanner = new Scanner(System.in);
         Map<String, String> filterCriteria = new HashMap<>();
 
-        System.out.println("Введите цифру, соответствующую необходимому критерию:");
+        System.out.println("Введите цифру, выбрав вариант для фильтрации: ");
         System.out.println("1 - ОЗУ");
         System.out.println("2 - Объем ЖД");
         System.out.println("3 - Операционная система");
         System.out.println("4 - Цвет");
+
+        int choice = scanner.nextInt();
+        scanner.nextLine();
+
+
 
     }
 }
