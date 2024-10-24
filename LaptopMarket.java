@@ -22,6 +22,24 @@ public class LaptopMarket {
         int choice = scanner.nextInt();
         scanner.nextLine();
 
+        switch (choice) {
+            case 1:
+                filterCriteria.put("RAM", "greaterThan");
+                break;
+            case 2:
+                filterCriteria.put("HDDSize", "greaterThan");
+                break;
+            case 3:
+                filterCriteria.put("operatingSystem", "equals");
+                break;
+            case 4:
+                filterCriteria.put("color", "equals");
+                break;
+            default:
+                System.out.println("Неверный  ввод. ");
+                return;
+        }
+
 
 
     }
