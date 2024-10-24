@@ -43,5 +43,13 @@ public class LaptopMarket {
         System.out.print("Введите минимальное значение для " + filterCriteria.keySet().iterator().next() + ": ");
         String minValue = scanner.nextLine();
 
+        List<Laptop> filteredLaptops = filterLaptops(laptops, filterCriteria, minValue);
+
+        System.out.println("Отфильтрованные ноутбуки:");
+        for (Laptop laptop : filteredLaptops) {
+            laptop.printInfo();
+        }
+
+
     }
 }
