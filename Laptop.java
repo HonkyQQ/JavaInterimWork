@@ -41,4 +41,13 @@ public class Laptop {
         return price;
     }
 
+    public void printInfo() {
+        System.out.println("Модель: " + model);
+        System.out.println("ОЗУ: " + RAM + " ГБ");
+        System.out.println("Объем ЖД: " + HDDSize + " ГБ");
+        System.out.println("Операционная система: " + operatingSystem);
+        System.out.println("Цвет: " + color);
+        System.out.println("Цена: " + price);
+        System.out.println("-----");
+    }
 }
