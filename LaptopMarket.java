@@ -50,6 +50,46 @@ public class LaptopMarket {
             laptop.printInfo();
         }
 
+    }
 
+    public static List<Laptop> filterLaptops(List<Laptop> laptops, Map<String, String> filterCriteria, String minValue) {
+        List<Laptop> filteredLaptops = new ArrayList<>();
+        for (Laptop laptop : laptops) {
+            boolean matches = true;
+            for (Map.Entry<String, String> entry : filterCriteria.entrySet()) {
+                String criterion = entry.getKey();
+                String operator = entry.getValue();
+                switch (criterion) {
+                    case "RAM":
+                        if (operator.equals("greaterThan") && laptop.getRAM() < Integer.parseInt(minValue)) {
+                            matches = false;
+                        } else if (operator.equals("equals") && laptop.getRAM() != Integer.parseInt(minValue)) {
+                            matches = false;
+                        }
+                        break;
+                    case "HDDSize":
+                        if (operator.equals("greaterThan") && laptop.getHDDSize() < Integer.parseInt(minValue)) {
+                            matches = false;
+                        } else if (operator.equals("equals") && laptop.getHDDSize() != Integer.parseInt(minValue)) {
+                            matches = false;
+                        }
+                        break;
+                    case "operatingSystem":
+                        if (operator.equals("equals") && !laptop.getOperatingSystem().equals(minValue)) {
+                            matches = false;
+                        }
+                        break;
+                    case "color":
+                        if (operator.equals("equals") && !laptop.getColor().equals(minValue)) {
+                            matches = false;
+                        }
+                        break;
+                }
+            }
+            if (matches) {
+                filteredLaptops.add(laptop);
+            }
+        }
+        return filteredLaptops;
     }
 }

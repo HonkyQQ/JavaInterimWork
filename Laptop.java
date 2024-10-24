@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 public class Laptop {
     private String model;
     private int RAM; // В гигабайтах
