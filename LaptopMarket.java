@@ -40,8 +40,8 @@ public class LaptopMarket {
                 return;
         }
 
-        System.out.print("Чтобы отфильтровать ноутбук по цвету или версии Windows, напишите его на английском языке.");
-        System.out.print("Введите минимальное значение для " + filterCriteria.keySet().iterator().next() + ": ");
+        System.out.println("Чтобы отфильтровать ноутбук по цвету или версии Windows, напишите его на английском языке.");
+        System.out.println("Введите минимальное значение для " + filterCriteria.keySet().iterator().next() + ": ");
         String minValue = scanner.nextLine();
 
         List<Laptop> filteredLaptops = filterLaptops(laptops, filterCriteria, minValue);
