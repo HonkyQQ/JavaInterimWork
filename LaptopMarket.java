@@ -40,7 +40,8 @@ public class LaptopMarket {
                 return;
         }
 
-
+        System.out.print("Введите минимальное значение для " + filterCriteria.keySet().iterator().next() + ": ");
+        String minValue = scanner.nextLine();
 
     }
 }
